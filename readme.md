@@ -157,6 +157,16 @@ The project includes a **Streamlit** application (`app.py`) that lets you explor
 | 🧠 **Linguistic Markers** | Real-time NLP analysis of the selected post (see below) |
 | 📊 **Data Table** | Browse the raw data behind the visualization |
 
+### 🔍 Fuzzy Membership Audit
+
+![Fuzzy Membership Audit](assets/fuzzy_membership_audit.png)
+
+The **Fuzzy Membership Audit** panel is the heart of the exploration experience. Click any dot on the galaxy map — or type a post index directly — and a **radar chart** instantly reveals how that post's distress is distributed across all six super-clusters.
+
+In the example above, Post #12961 describes a deeply personal account of childhood trauma. The radar chart shows the membership is concentrated around **Societal & Misc** and **Social Isolation**, with smaller signals bleeding into **Family & Domestic** — exactly what you'd expect for a post about familial abuse and its lasting social consequences. The full post text is displayed below the chart, letting you read the original words and judge whether the model's soft assignment makes intuitive sense.
+
+This is what makes fuzzy clustering powerful: rather than forcing this post into a single category, the radar chart honestly shows the *overlap* — the way one person's pain touches multiple dimensions simultaneously.
+
 ---
 
 ## 🧠 Linguistic Marker Analysis
@@ -170,6 +180,18 @@ Each selected post is analyzed in real-time for clinically validated linguistic 
 | **Cognitive Distress Score** | ATQ Literature | Combined weighted score from absolutism + negative self-reference (0.0 – 1.0) |
 | **Attribution Style** | Pronoun Analysis | Ratio of first-person (`I`, `me`, `my`) to external references (`they`, `parents`, `society`) — internal vs. external attribution of distress |
 | **Resilience Signals** | Positive Self-Words | Detects words like *"healing"*, *"recovering"*, *"growing"* as counter-indicators |
+
+![Linguistic Marker Analysis](assets/linguistic_marker_analysis.png)
+
+The **Linguistic Marker Analysis** panel runs real-time NLP on the currently selected post for validated psycholinguistic signals. In the example above:
+
+- **Absolutist Thinking: 2.0%** — the post contains words like *nothing*, *forever*, *never*, *everything*, and *always*, exceeding the Western depression baseline of ~1.5% (Al-Mosaiwi & Johnstone, 2018). These all-or-nothing words are a hallmark of cognitive distortion in depressive language.
+- **Negative Self-Ref: 0.0%** — interestingly, despite the heavy emotional weight of the post, no explicit self-deprecating words were detected. The pain is expressed through *narrative*, not self-labeling.
+- **Cognitive Distress: 0.15** — a moderate score driven entirely by absolutist language rather than negative self-reference.
+- **Attribution Style: Internal (ratio 3.82)** — the post is overwhelmingly first-person (*I*, *me*, *my* at 13.2%) with minimal external references (3.4%), indicating the author internalizes their distress rather than attributing it outward.
+- **Flagged Words** — absolutist terms are surfaced as red pills, while the green "Resilience signals" section detected the word *good*, a small but notable counter-indicator.
+
+This kind of micro-level linguistic analysis complements the macro-level galaxy view — the galaxy tells you *where* a post sits in the landscape of distress, while the markers tell you *how* the distress is being expressed at the word level.
 
 > Minimum 20 words required for reliable analysis. Flagged words are highlighted as color-coded pills in the sidebar.
 
@@ -252,7 +274,9 @@ tracking_the_semantic_shift/
 ├── distress_final_reduced.csv      # Processed dataset (17,398 posts)
 ├── pyproject.toml                  # Project configuration
 ├── assets/
-│   └── galaxy_banner.png           # README banner
+│   ├── galaxy_banner.png           # README banner
+│   ├── fuzzy_membership_audit.png  # Radar chart audit screenshot
+│   └── linguistic_marker_analysis.png  # Linguistic markers screenshot
 └── readme.md                       # You are here
 ```
 
