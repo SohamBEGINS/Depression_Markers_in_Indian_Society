@@ -159,7 +159,7 @@ The project includes a **Streamlit** application (`app.py`) that lets you explor
 
 ### 🔍 Fuzzy Membership Audit
 
-![Fuzzy Membership Audit](assets/fuzzy_membership_audit.png)
+<img src="assets/fuzzy_membership_audit.png" alt="Fuzzy Membership Audit" width="420"/>
 
 The **Fuzzy Membership Audit** panel is the heart of the exploration experience. Click any dot on the galaxy map — or type a post index directly — and a **radar chart** instantly reveals how that post's distress is distributed across all six super-clusters.
 
@@ -181,7 +181,7 @@ Each selected post is analyzed in real-time for clinically validated linguistic 
 | **Attribution Style** | Pronoun Analysis | Ratio of first-person (`I`, `me`, `my`) to external references (`they`, `parents`, `society`) — internal vs. external attribution of distress |
 | **Resilience Signals** | Positive Self-Words | Detects words like *"healing"*, *"recovering"*, *"growing"* as counter-indicators |
 
-![Linguistic Marker Analysis](assets/linguistic_marker_analysis.png)
+<img src="assets/linguistic_marker_analysis.png" alt="Linguistic Marker Analysis" width="420"/>
 
 The **Linguistic Marker Analysis** panel runs real-time NLP on the currently selected post for validated psycholinguistic signals. In the example above:
 
