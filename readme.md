@@ -1,5 +1,9 @@
 # 🌌 Tracking the Semantic Shift
+# Created by:
+## Animesh Patra & Soham Ganguly 
 
+### Motivation:
+This project aims to analyze the various internal and external stressors expressed in depression-related Reddit posts within the context of Indian society.
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://distress-galaxy-india.streamlit.app/)
 
 ![Galaxy Banner](assets/galaxy_banner.png)
