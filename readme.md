@@ -244,9 +244,26 @@ The app will open at `http://localhost:8501`.
 **Alternative (pip):**
 
 ```bash
-pip install streamlit pandas plotly
+pip install -r requirements.txt
 streamlit run app.py
 ```
+
+---
+
+## ☁️ Deployment
+
+This repository is optimized for deployment on **Streamlit Cloud**.
+
+### Steps to Deploy:
+1. **GitHub**: Push this repository to your GitHub account.
+2. **Streamlit Cloud**: Connect your GitHub account to [Streamlit Cloud](https://share.streamlit.io/).
+3. **New App**: Click 'Create app' and select this repository.
+4. **Main File**: Set the main file path to `app.py`.
+5. **Config**: The `.streamlit/config.toml` file is already included to ensure the dark galaxy theme is applied automatically.
+6. **Deploy**: Click 'Deploy!' and wait for the galaxy to ignite. 🌌
+
+> **Note on Data:** The `distress_final_reduced.csv` file (~37MB) is included in the repository. Streamlit Cloud handles files up to 50MB via standard GitHub uploads. If the dataset grows larger, consider using **Git LFS**.
+
 
 ---
 
