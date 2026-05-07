@@ -1,5 +1,7 @@
 # 🌌 Tracking the Semantic Shift
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://distress-galaxy-india.streamlit.app/)
+
 ![Galaxy Banner](assets/galaxy_banner.png)
 
 ### A Sociological Galaxy of Indian Mental-Health Discourse on Reddit (2010 – 2026)

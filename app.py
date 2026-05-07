@@ -138,7 +138,7 @@ fuzz_limit = st.sidebar.slider(
     "Fuzziness >=Threshold (Filter out posts)",
     min_value=0.0,
     max_value=1.0,
-    value=1.0,
+    value=0.3408,
     step=0.0001,
     format="%.4f"
 )
